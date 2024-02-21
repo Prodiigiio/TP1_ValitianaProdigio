@@ -46,7 +46,7 @@ public class Main {
         ram.setRabais(0.25);
         System.out.println("La prix de la composante: " + ram.getPrix()); // La prix de la composante: 75.0
         System.out.println("Son rabais: " + ram.getRabais()); // Son rabais: 0.25
-        System.out.println("Est-ce tridentzDDR5?: " + ram.estIdentique(tridentzDDR5)); // Est-ce tridentzDDR5?: true
+        System.out.println("Est-ce tridentz DDR5?: " + ram.estIdentique(tridentzDDR5)); // Est-ce tridentzDDR5?: true
         Composant aucun = config2.rechercher("ssd");
         System.out.println("La composante: " + aucun); // La composante: null
         commencerTest("Ajouts de composants");

@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Composant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="Class Composants:&#10;Setters, Getters, Constructeur">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Composant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Composant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +23,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -74,11 +75,24 @@
       <workItem from="1708434478419" duration="66000" />
       <workItem from="1708434709919" duration="346000" />
       <workItem from="1708539790306" duration="1536000" />
-      <workItem from="1708554648272" duration="729000" />
+      <workItem from="1708554648272" duration="2595000" />
     </task>
+    <task id="LOCAL-00001" summary="Class Composants:&#10;Setters, Getters, Constructeur">
+      <option name="closed" value="true" />
+      <created>1708555774779</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708555774780</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Class Composants:&#10;Setters, Getters, Constructeur" />
+    <option name="LAST_COMMIT_MESSAGE" value="Class Composants:&#10;Setters, Getters, Constructeur" />
   </component>
 </project>

@@ -1,5 +1,5 @@
 public class Composant {
-    private String categorie = "";
+    private String categorie;
     private String marque;
     private String nom;
     private double prix;
@@ -10,6 +10,15 @@ public class Composant {
         setMarque(marque);
         setNom(nom);
         setPrix(prix);
+        setRabais(0.00);
+    }
+
+    private Composant(String categorie, String marque, String nom, double prix, double rabais){
+            setCategorie(categorie);
+            setMarque(marque);
+            setNom(nom);
+            setPrix(prix);
+            setRabais(rabais);
     }
     public String getCategorie() {
         return categorie;
@@ -42,10 +51,8 @@ public class Composant {
         this.rabais = rabais;
     }
 
-    public copier(Composant composant){
-        this.categorie = composant.categorie;
-        this.marque = composant.marque;
-        this.nom = composant.nom;
+    public Composant copier(){
+        return new Composant(getCategorie(), getMarque(), getNom(), getPrix(), getRabais());
     }
 
     public boolean estIdentique(Composant autre){
