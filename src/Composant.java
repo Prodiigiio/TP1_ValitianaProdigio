@@ -39,7 +39,7 @@ public class Composant {
         this.nom = nom;
     }
     public double getPrix() {
-        return prix * setRabais(rabais);
+        return this.prix - (this.prix * getRabais());
     }
     public void setPrix(double prix) {
         this.prix = prix;
@@ -63,4 +63,8 @@ public class Composant {
         return false;
     }
 
+    @Override
+    public String toString() {
+        return "[" + getCategorie() +"]" + " " + getMarque() + " " + getNom();
+    }
 }
