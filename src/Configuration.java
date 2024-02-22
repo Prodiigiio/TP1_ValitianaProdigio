@@ -43,13 +43,18 @@ public class Configuration {
     }
 
     public double calculerTotal(double taxe) {
+        double coutTotalSansTaxes = getCoutTotalSansTaxes();
+        return coutTotalSansTaxes + (coutTotalSansTaxes * taxe);
+    }
+
+    private double getCoutTotalSansTaxes() {
         double coutTotalSansTaxes = 0;
         for (int i = 0; i < getComposants().length; i++) {
             if (getComposants()[i] != null) {
                 coutTotalSansTaxes += getComposants()[i].getPrix();
             }
         }
-        return coutTotalSansTaxes + (coutTotalSansTaxes * taxe);
+        return coutTotalSansTaxes;
     }
 
     public Composant rechercher(String categorie){
@@ -64,6 +69,7 @@ public class Configuration {
     public boolean ajouter(Composant composant){
         if(getNbComposants() >= getComposants().length) // guard clause source: mon adelphe
             return false;
+        
         for (int i = 0; i < getComposants().length; i++) {
             if(getComposants()[i].getCategorie().equals(composant.getCategorie()))
                 return false;
