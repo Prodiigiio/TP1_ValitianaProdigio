@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="boolean ajouter">
+    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="boolean retirer">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
     </list>
@@ -74,7 +74,7 @@
       <workItem from="1708434478419" duration="66000" />
       <workItem from="1708434709919" duration="346000" />
       <workItem from="1708539790306" duration="1536000" />
-      <workItem from="1708554648272" duration="12764000" />
+      <workItem from="1708554648272" duration="13121000" />
     </task>
     <task id="LOCAL-00001" summary="Class Composants:&#10;Setters, Getters, Constructeur">
       <option name="closed" value="true" />
@@ -172,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708568314829</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="boolean retirer">
+      <option name="closed" value="true" />
+      <created>1708568626796</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1708568626796</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +199,7 @@
     <MESSAGE value=" getNbComposant :+1:&#10; compte le nombre de composants" />
     <MESSAGE value="getCoutTotalSansTaxes ⚠️EXTRACTION⚠️&#10;Une extraction qui était à la base membre d'une autre méthode sous le nom de &quot;calculerCoutTotal&quot;" />
     <MESSAGE value="boolean ajouter" />
-    <option name="LAST_COMMIT_MESSAGE" value="boolean ajouter" />
+    <MESSAGE value="boolean retirer" />
+    <option name="LAST_COMMIT_MESSAGE" value="boolean retirer" />
   </component>
 </project>

@@ -64,6 +64,14 @@ public class Configuration {
         }
         return null;
     }
+    public int getNbComposants(){
+        int compteurComposant = 0;
+        for (int i = 0; i < getComposants().length; i++) {
+            if(getComposants()[i] !=null)
+                compteurComposant++;
+        }
+        return compteurComposant;
+    }
 
     public boolean ajouter(Composant composant){
         if(getNbComposants() >= getComposants().length) // guard clause source: mon adelphe
@@ -93,12 +101,13 @@ public class Configuration {
         return false;
     }
 
-    private int getNbComposants(){
-        int compteurComposant = 0;
+    public boolean remplacer(Composant composant){
         for (int i = 0; i < getComposants().length; i++) {
-            if(getComposants()[i] !=null)
-                compteurComposant++;
+            if(getComposants()[i].getCategorie().equals(composant.getCategorie())){
+                getComposants()[i] = composant;
+                return true;
+            }
         }
-        return compteurComposant;
+        return false;
     }
 }
