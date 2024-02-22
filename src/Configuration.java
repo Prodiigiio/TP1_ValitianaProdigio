@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Configuration {
     private String DESCRIPTION;
     private double prixMax;
@@ -37,7 +39,7 @@ public class Configuration {
     }
 
     public void setComposants(Composant[] composants) {
-        if(this.composants.length > MAX_COMPOSANTS) //source pour "Guard clause": mon adelphe
+        if(composants.length > MAX_COMPOSANTS) //source pour "Guard clause": mon adelphe
             return;
         this.composants = composants;
     }
@@ -59,7 +61,7 @@ public class Configuration {
     public Composant rechercher(String categorie){
         for (int i = 0; i < getComposants().length; i++) {
             if(getComposants()[i] != null)
-                if(getComposants()[i].getCategorie().equals(categorie))
+                if(getComposants()[i].getCategorie().equalsIgnoreCase(categorie))
                     return getComposants()[i];
         }
         return null;
@@ -93,7 +95,7 @@ public class Configuration {
 
     public boolean retirer(Composant composant){
         for (int i = 0; i < getComposants().length; i++) {
-            if(getComposants()[i].equals(composant)) {
+            if(getComposants()[i] != null && getComposants()[i].estIdentique(composant) ) {
                 getComposants()[i] = null;
                 return true;
             }
@@ -103,11 +105,22 @@ public class Configuration {
 
     public boolean remplacer(Composant composant){
         for (int i = 0; i < getComposants().length; i++) {
-            if(getComposants()[i].getCategorie().equals(composant.getCategorie())){
+            if(getComposants()[i] != null && getComposants()[i].getCategorie().equals(composant.getCategorie())){
                 getComposants()[i] = composant;
                 return true;
             }
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        String specComplete ="";
+        for (int i = 0; i < getComposants().length; i++) {
+            if(getComposants()[i] != null){
+                specComplete += "Composant " + (i+1) + " : " + getComposants()[i].getPrix() + "$ \n";
+            }
+        }
+        return "Description: " + getCoutTotalSansTaxes() + "\n" + specComplete ;
     }
 }
