@@ -21,19 +21,19 @@ public class Composant {
             setRabais(rabais);
     }
     public String getCategorie() {
-        return categorie;
+        return this.categorie;
     }
     public void setCategorie(String categorie) {
         this.categorie = categorie;
     }
     public String getMarque() {
-        return marque;
+        return this.marque;
     }
     public void setMarque(String marque) {
         this.marque = marque;
     }
     public String getNom() {
-        return nom;
+        return this.nom;
     }
     public void setNom(String nom) {
         this.nom = nom;
@@ -45,7 +45,7 @@ public class Composant {
         this.prix = prix;
     }
     public double getRabais() {
-        return rabais;
+        return this.rabais;
     }
     public void setRabais(double rabais) {
         this.rabais = rabais;
@@ -56,11 +56,7 @@ public class Composant {
     }
 
     public boolean estIdentique(Composant autre){
-        if(this.categorie.equals(autre.getCategorie()))
-            if(this.marque.equals(autre.getMarque()))
-                if(this.nom.equals(autre.getNom()))
-                    return true;
-        return false;
+        return getCategorie().equals(autre.getCategorie()) && getMarque().equals(autre.getMarque()) && getNom().equals(autre.getNom());
     }
 
     @Override
