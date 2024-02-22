@@ -127,9 +127,7 @@ public class Configuration {
             if(getComposants()[i] != null){
                 specComplete += "Composant " + (i+1) + " : " + getComposants()[i].getPrix() + "$ \n";
             }
-            else{
-                specComplete += "Composant " + (i+1) + " : " + null;
-            }
+
         }
         return "Description: " + getCoutTotalSansTaxes() + "\n" + specComplete ;
     }

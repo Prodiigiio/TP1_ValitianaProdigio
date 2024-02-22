@@ -39,16 +39,19 @@ public class Composant {
         this.nom = nom;
     }
     public double getPrix() {
+
         return this.prix - (this.prix * getRabais());
     }
     public void setPrix(double prix) {
         this.prix = prix;
     }
     public double getRabais() {
-        return this.rabais;
+        return this.rabais / 100;
     }
     public void setRabais(double rabais) {
-        this.rabais = rabais;
+        if(this.rabais < 0 || this.rabais > 100){
+            this.rabais = rabais;
+        }
     }
 
     public Composant copier(){
