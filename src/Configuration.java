@@ -99,13 +99,15 @@ public class Configuration {
     }
 
     public boolean retirer(Composant composant){
-        for (int i = 0; i < getComposants().length; i++) {
-            if(getComposants()[i] != null && getComposants()[i].estIdentique(composant) ) {
-                getComposants()[i] = null;
-                return true;
-            }
+        int j = 0;
+        while(getComposants()[j] != null && !(getComposants()[j].estIdentique(composant)) && j < getComposants().length -1){
+            getComposants()[j] = null;
+            j++;
         }
-        return false;
+        for (int i = j; i < getComposants().length -1; i++) {
+            getComposants()[i] = getComposants()[i+1];
+        }
+        return true;
     }
 
     public boolean remplacer(Composant composant){
