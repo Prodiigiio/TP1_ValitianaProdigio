@@ -9,6 +9,12 @@ public class Configuration {
         setComposants(composants);
     }
 
+    public Configuration(Configuration originale){
+        setDescription(originale.getDESCRIPTION());
+        setPrixMax(originale.getPrixMax());
+        setComposants(originale.getComposants());
+    }
+
     public String getDESCRIPTION() {
         return DESCRIPTION;
     }
@@ -36,6 +42,4 @@ public class Configuration {
     private Configuration copie(){
         return new Configuration(getDESCRIPTION(), getPrixMax(), getComposants());
     }
-
-    private Configuration copierProfonde
 }
