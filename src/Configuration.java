@@ -83,6 +83,16 @@ public class Configuration {
         return false;
     }
 
+    public boolean retirer(Composant composant){
+        for (int i = 0; i < getComposants().length; i++) {
+            if(getComposants()[i].equals(composant)) {
+                getComposants()[i] = null;
+                return true;
+            }
+        }
+        return false;
+    }
+
     private int getNbComposants(){
         int compteurComposant = 0;
         for (int i = 0; i < getComposants().length; i++) {
