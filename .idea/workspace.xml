@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="Class Configuration:&#10;Constructeur copie Profonde :heavy_check_mark:">
+    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="calculerTotal avec taxes :+1:">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
     </list>
@@ -74,7 +74,7 @@
       <workItem from="1708434478419" duration="66000" />
       <workItem from="1708434709919" duration="346000" />
       <workItem from="1708539790306" duration="1536000" />
-      <workItem from="1708554648272" duration="8516000" />
+      <workItem from="1708554648272" duration="8962000" />
     </task>
     <task id="LOCAL-00001" summary="Class Composants:&#10;Setters, Getters, Constructeur">
       <option name="closed" value="true" />
@@ -124,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708562933402</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="calculerTotal avec taxes :+1:">
+      <option name="closed" value="true" />
+      <created>1708564422540</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708564422540</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +145,7 @@
     <MESSAGE value="Class Composants:&#10;Méthode estIdentique rendu plus beau :)" />
     <MESSAGE value="Class Configuration:&#10;getters, Setters, constructeur et début de la création de la copie profonde" />
     <MESSAGE value="Class Configuration:&#10;Constructeur copie Profonde :heavy_check_mark:" />
-    <option name="LAST_COMMIT_MESSAGE" value="Class Configuration:&#10;Constructeur copie Profonde :heavy_check_mark:" />
+    <MESSAGE value="calculerTotal avec taxes :+1:" />
+    <option name="LAST_COMMIT_MESSAGE" value="calculerTotal avec taxes :+1:" />
   </component>
 </project>

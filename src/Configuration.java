@@ -49,4 +49,13 @@ public class Configuration {
         }
         return coutTotalSansTaxes + (coutTotalSansTaxes * taxe);
     }
+
+    public Composant rechercher(String categorie){
+        for (int i = 0; i < getComposants().length; i++) {
+            if(getComposants()[i] != null)
+                if(getComposants()[i].getCategorie().equals(categorie))
+                    return getComposants()[i];
+        }
+        return null;
+    }
 }
