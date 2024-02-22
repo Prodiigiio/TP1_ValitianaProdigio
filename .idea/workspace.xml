@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="dernier commit du jour 02/21/2024">
+    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="public getComposant() - MISE A JOUR&#10;Ajouté une boucle qui vérifie si la valeur de la cellule du composant est vide.&#10;Si pas vide, retourne le composant.&#10;Sinon, retourne null. (Pourait causer un problème plus tard?)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
     </list>
@@ -77,7 +77,7 @@
       <workItem from="1708554648272" duration="13172000" />
       <workItem from="1708569031854" duration="1965000" />
       <workItem from="1708571047516" duration="119000" />
-      <workItem from="1708613791543" duration="736000" />
+      <workItem from="1708613791543" duration="1803000" />
     </task>
     <task id="LOCAL-00001" summary="Class Composants:&#10;Setters, Getters, Constructeur">
       <option name="closed" value="true" />
@@ -207,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708570974708</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="public getComposant() - MISE A JOUR&#10;Ajouté une boucle qui vérifie si la valeur de la cellule du composant est vide.&#10;Si pas vide, retourne le composant.&#10;Sinon, retourne null. (Pourait causer un problème plus tard?)">
+      <option name="closed" value="true" />
+      <created>1708614624499</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1708614624499</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +239,8 @@
     <MESSAGE value="MISE À JOUR -------&#10;composant remplacé this.composant -&gt; référencé la variable d'instance au lieu du paramètre.&#10;composant rechercher -&gt; equalsIgnoreCase() au lieu de .equals()&#10;dans retirer, j'ai changé le .equals en estIdentique() &amp; != null avant la deuxième condition&#10;pour  méthode rempalcer aussi" />
     <MESSAGE value="MISE À JOUR -------&#10;composant remplacé this.composant -&gt; référencé la variable d'instance au lieu du paramètre.&#10;composant rechercher -&gt; equalsIgnoreCase() au lieu de .equals()&#10;dans retirer, j'ai changé le .equals en estIdentique() &amp; != null avant la deuxième condition&#10;pour  méthode remplacer aussi" />
     <MESSAGE value="dernier commit du jour 02/21/2024" />
-    <option name="LAST_COMMIT_MESSAGE" value="dernier commit du jour 02/21/2024" />
+    <MESSAGE value="public getComposant() - MISE A JOUR&#10;Ajouté une boucle qui vérifie si la valeur de la cellule du composant est vide.&#10;Si pas vide, retourne le composant.&#10;Sinon, retourne null. (Pourait causer un problème plus tard?)" />
+    <option name="LAST_COMMIT_MESSAGE" value="public getComposant() - MISE A JOUR&#10;Ajouté une boucle qui vérifie si la valeur de la cellule du composant est vide.&#10;Si pas vide, retourne le composant.&#10;Sinon, retourne null. (Pourait causer un problème plus tard?)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
