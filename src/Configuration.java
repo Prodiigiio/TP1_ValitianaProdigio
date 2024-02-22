@@ -2,6 +2,7 @@ public class Configuration {
     private String DESCRIPTION;
     private double prixMax;
     private Composant[] composants;
+    private final int MAX_COMPOSANTS = 20;
 
     public Configuration(String description, double prixMax, Composant[] composants){
         setDescription(description);
@@ -39,7 +40,13 @@ public class Configuration {
         this.composants = composants;
     }
 
-    private Configuration copie(){
-        return new Configuration(getDESCRIPTION(), getPrixMax(), getComposants());
+    public double calculerTotal(double taxe) {
+        double coutTotalSansTaxes = 0;
+        for (int i = 0; i < getComposants().length; i++) {
+            if (getComposants()[i] != null) {
+                coutTotalSansTaxes += getComposants()[i].getPrix();
+            }
+        }
+        return coutTotalSansTaxes + (coutTotalSansTaxes * taxe);
     }
 }
