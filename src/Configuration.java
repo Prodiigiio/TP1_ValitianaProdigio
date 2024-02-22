@@ -62,10 +62,20 @@ public class Configuration {
     }
 
     public boolean ajouter(Composant composant){
+        if(getNbComposants() >= getComposants().length) // guard clause source: mon adelphe
+            return false;
         for (int i = 0; i < getComposants().length; i++) {
-            if(getComposants()[i].getCategorie().equals(composant.getCategorie()) ||
-            i > MAX_COMPOSANTS)
-
+            if(getComposants()[i].getCategorie().equals(composant.getCategorie()))
+                return false;
         }
+    }
+
+    private int getNbComposants(){
+        int compteurComposant = 0;
+        for (int i = 0; i < getComposants().length; i++) {
+            if(getComposants()[i] !=null)
+                compteurComposant++;
+        }
+        return compteurComposant;
     }
 }
