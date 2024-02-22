@@ -56,7 +56,9 @@ public class Composant {
     }
 
     public boolean estIdentique(Composant autre){
-        return getCategorie().equals(autre.getCategorie()) && getMarque().equals(autre.getMarque()) && getNom().equals(autre.getNom());
+        return getCategorie().equals(autre.getCategorie()) &&
+                getMarque().equals(autre.getMarque()) &&
+                getNom().equals(autre.getNom());
     }
 
     @Override
