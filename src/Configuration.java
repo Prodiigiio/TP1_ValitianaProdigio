@@ -35,7 +35,12 @@ public class Configuration {
     }
 
     public Composant[] getComposants() {
-        return composants;
+        for (int i = 0; i < composants.length; i++) {
+            if(composants[i] != null) {
+                return composants;
+            }
+        }
+        return null;
     }
 
     public void setComposants(Composant[] composants) {
