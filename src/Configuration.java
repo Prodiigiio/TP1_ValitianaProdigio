@@ -37,6 +37,8 @@ public class Configuration {
     }
 
     public void setComposants(Composant[] composants) {
+        if(this.composants.length > MAX_COMPOSANTS) //source pour "Guard clause": mon adelphe
+            return;
         this.composants = composants;
     }
 
@@ -57,5 +59,13 @@ public class Configuration {
                     return getComposants()[i];
         }
         return null;
+    }
+
+    public boolean ajouter(Composant composant){
+        for (int i = 0; i < getComposants().length; i++) {
+            if(getComposants()[i].getCategorie().equals(composant.getCategorie()) ||
+            i > MAX_COMPOSANTS)
+
+        }
     }
 }
