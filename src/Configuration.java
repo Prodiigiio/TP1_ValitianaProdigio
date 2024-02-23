@@ -5,11 +5,13 @@ public class Configuration {
     private double prixMax;
     private Composant[] composants;
     private final int MAX_COMPOSANTS = 20;
+    Composant[] tableauTemp;
 
     public Configuration(String description, double prixMax, Composant[] composants){
         setDescription(description);
         setPrixMax(prixMax);
         setComposants(composants);
+        setTableauTemp(composants);
     }
 
     public Configuration(Configuration originale){
@@ -39,6 +41,8 @@ public class Configuration {
             if(composants[i] != null) {
                 return composants;
             }
+            if(composants[i] == null)
+                composants[i] = composants[i+1];
         }
         return composants;
     }
@@ -47,6 +51,14 @@ public class Configuration {
         if(composants.length > MAX_COMPOSANTS) //source pour "Guard clause": mon adelphe
             return;
         this.composants = composants;
+    }
+
+    public Composant[] getTableauTemp() {
+        return tableauTemp;
+    }
+
+    public void setTableauTemp(Composant[] tableauTemp) {
+        this.tableauTemp = tableauTemp;
     }
 
     public double calculerTotal(double taxe) {
@@ -81,20 +93,36 @@ public class Configuration {
     }
 
     public boolean ajouter(Composant composant){
-        if(getNbComposants() >= getComposants().length) // guard clause source: mon adelphe
-            return false;
-        if((getCoutTotalSansTaxes() + composant.getPrix()) > getPrixMax())
-            return false;
+
+
+
         for (int i = 0; i < getComposants().length; i++) {
             if(getComposants()[i].getCategorie().equals(composant.getCategorie()))
                 return false;
         }
         for (int i = 0; i < getComposants().length; i++) {
-            if(getComposants()[i] == null){
-                getComposants()[i] = composant;
-                return true;
-            }
+            getComposants()[i] = composant;
         }
+
+        if(getNbComposants() >= MAX_COMPOSANTS) // guard clause source: mon adelphe
+            return false;
+        if((getCoutTotalSansTaxes() + composant.getPrix()) > getPrixMax())
+            return false;
+
+        //SI TABLEAU EST TROP PETIT
+        if (getNbComposants() == getComposants().length){
+            tableauTemp = new Composant[getComposants().length * 2];
+        }
+
+        for (int i = 0; i < getComposants().length; i++) {
+            tableauTemp[i] = getComposants()[i];
+        }
+        for (int i = 0; i < tableauTemp.length; i++) {
+            if(tableauTemp[i] == null)
+                tableauTemp[i] = composant;
+        }
+
+        setComposants(tableauTemp);
         return false;
     }
 

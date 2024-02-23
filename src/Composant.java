@@ -46,7 +46,7 @@ public class Composant {
         this.prix = prix;
     }
     public double getRabais() {
-        return this.rabais / 100;
+        return this.rabais;
     }
     public void setRabais(double rabais) {
         if(this.rabais < 0 || this.rabais > 100){
