@@ -39,7 +39,6 @@ public class Composant {
         this.nom = nom;
     }
     public double getPrix() {
-
         return this.prix - (this.prix * getRabais());
     }
     public void setPrix(double prix) {
@@ -49,7 +48,7 @@ public class Composant {
         return this.rabais;
     }
     public void setRabais(double rabais) {
-        if(this.rabais < 0 || this.rabais > 100){
+        if(this.rabais >= 0 && this.rabais <= 100){
             this.rabais = rabais;
         }
     }
@@ -66,6 +65,6 @@ public class Composant {
 
     @Override
     public String toString() {
-        return "[" + getCategorie() +"]" + " " + getMarque() + " " + getNom();
+        return "[" + getCategorie().toUpperCase().trim() +"]" + " " + getMarque() + " " + getNom();
     }
 }

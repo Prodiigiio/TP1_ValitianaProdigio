@@ -5,13 +5,12 @@ public class Configuration {
     private double prixMax;
     private Composant[] composants;
     private final int MAX_COMPOSANTS = 20;
-    Composant[] tableauTemp;
+
 
     public Configuration(String description, double prixMax, Composant[] composants){
         setDescription(description);
         setPrixMax(prixMax);
         setComposants(composants);
-        setTableauTemp(composants);
     }
 
     public Configuration(Configuration originale){
@@ -19,6 +18,7 @@ public class Configuration {
         setPrixMax(originale.getPrixMax());
         setComposants(originale.getComposants());
     }
+
 
     public String getDESCRIPTION() {
         return DESCRIPTION;
@@ -36,29 +36,16 @@ public class Configuration {
         this.prixMax = prixMax;
     }
 
+
+
     public Composant[] getComposants() {
-        for (int i = 0; i < composants.length; i++) {
-            if(composants[i] != null) {
-                return composants;
-            }
-            if(composants[i] == null)
-                composants[i] = composants[i+1];
-        }
-        return composants;
+        return this.composants;
     }
 
     public void setComposants(Composant[] composants) {
         if(composants.length > MAX_COMPOSANTS) //source pour "Guard clause": mon adelphe
             return;
-        this.composants = composants;
-    }
-
-    public Composant[] getTableauTemp() {
-        return tableauTemp;
-    }
-
-    public void setTableauTemp(Composant[] tableauTemp) {
-        this.tableauTemp = tableauTemp;
+        this.composants = tableauComposantRearrange(composants);
     }
 
     public double calculerTotal(double taxe) {
@@ -66,7 +53,7 @@ public class Configuration {
     }
 
     private double getCoutTotalSansTaxes() {
-        double coutTotalSansTaxes = 0;
+        double coutTotalSansTaxes = 0.0;
         for (int i = 0; i < getComposants().length; i++) {
             if (getComposants()[i] != null) {
                 coutTotalSansTaxes += getComposants()[i].getPrix();
@@ -77,9 +64,8 @@ public class Configuration {
 
     public Composant rechercher(String categorie){
         for (int i = 0; i < getComposants().length; i++) {
-            if(getComposants()[i] != null)
-                if(getComposants()[i].getCategorie().equalsIgnoreCase(categorie))
-                    return getComposants()[i];
+            if(getComposants()[i] != null && getComposants()[i].getCategorie().equalsIgnoreCase(categorie))
+                return getComposants()[i];
         }
         return null;
     }
@@ -92,56 +78,63 @@ public class Configuration {
         return compteurComposant;
     }
 
+    public Composant[] tableauComposantRearrange(Composant[] composant){
+        Composant[] tableauTemp = new Composant[MAX_COMPOSANTS];
+        int j = 0;
+        for (int i = 0; i < composant.length; i++) {
+            if(composant[i] != null){
+                tableauTemp[j] = composant[i];
+                j++;
+            }
+        }
+        return tableauTemp;
+    }
+
     public boolean ajouter(Composant composant){
-
-
-
-        for (int i = 0; i < getComposants().length; i++) {
-            if(getComposants()[i].getCategorie().equals(composant.getCategorie()))
-                return false;
-        }
-        for (int i = 0; i < getComposants().length; i++) {
-            getComposants()[i] = composant;
-        }
 
         if(getNbComposants() >= MAX_COMPOSANTS) // guard clause source: mon adelphe
             return false;
+
+        for (int i = 0; i < getComposants().length; i++) {
+            if(getComposants()[i] != null && getComposants()[i].getCategorie().equalsIgnoreCase(composant.getCategorie()))
+                return false;
+        }
+
         if((getCoutTotalSansTaxes() + composant.getPrix()) > getPrixMax())
             return false;
 
-        //SI TABLEAU EST TROP PETIT
-        if (getNbComposants() == getComposants().length){
-            tableauTemp = new Composant[getComposants().length * 2];
-        }
 
         for (int i = 0; i < getComposants().length; i++) {
-            tableauTemp[i] = getComposants()[i];
+            if(getComposants()[i] == null){
+                getComposants()[i] = composant;
+                setComposants(tableauComposantRearrange(getComposants()));
+                return true;
+            }
         }
-        for (int i = 0; i < tableauTemp.length; i++) {
-            if(tableauTemp[i] == null)
-                tableauTemp[i] = composant;
-        }
-
-        setComposants(tableauTemp);
+        setComposants(tableauComposantRearrange(getComposants()));
         return false;
     }
 
+
+
     public boolean retirer(Composant composant){
-        int j = 0;
-        while(getComposants()[j] != null && !(getComposants()[j].estIdentique(composant)) && j < getComposants().length -1){
-            getComposants()[j] = null;
-            j++;
+        for (int i = 0; i < getComposants().length; i++) {
+            if(getComposants()[i] != null && getComposants()[i].estIdentique(composant)){
+                getComposants()[i] = null;
+                setComposants(tableauComposantRearrange(getComposants()));
+                return true;
+            }
         }
-        for (int i = j; i < getComposants().length -1; i++) {
-            getComposants()[i] = getComposants()[i+1];
-        }
-        return true;
+        setComposants(tableauComposantRearrange(getComposants()));
+        return false;
     }
 
     public boolean remplacer(Composant composant){
         for (int i = 0; i < getComposants().length; i++) {
-            if(getComposants()[i] != null && getComposants()[i].getCategorie().equals(composant.getCategorie())){
+            if(getComposants()[i] != null && getComposants()[i].getCategorie().equalsIgnoreCase(composant.getCategorie())){
+                getComposants()[i] = null;
                 getComposants()[i] = composant;
+                setComposants(tableauComposantRearrange(getComposants()));
                 return true;
             }
         }
@@ -150,13 +143,12 @@ public class Configuration {
 
     @Override
     public String toString() {
-        String specComplete ="";
+        String specComplete = "";
         for (int i = 0; i < getComposants().length; i++) {
-            if(getComposants()[i] != null){
-                specComplete += "Composant " + (i+1) + " : " + getComposants()[i].getPrix() + "$ \n";
+            if (getComposants()[i] != null) {
+                specComplete += String.format("%d : %s (%.2f$)\n", (i + 1), getComposants()[i].toString(), getComposants()[i].getPrix());
             }
-
         }
-        return "Description: " + getCoutTotalSansTaxes() + "\n" + specComplete ;
+        return String.format("%s (max %.2f$):\n%s", getDESCRIPTION(), getPrixMax(), specComplete);
     }
 }
