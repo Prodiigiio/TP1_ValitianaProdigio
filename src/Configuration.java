@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Configuration {
     private String DESCRIPTION;
     private double prixMax;
@@ -123,6 +121,9 @@ public class Configuration {
                 getComposants()[i] = null;
                 setComposants(tableauComposantRearrange(getComposants()));
                 return true;
+            }
+            if(getComposants()[i] != null && !(getComposants()[i].equals(composant))){
+                System.out.println("Composant introuvable: " + getComposants()[i].toString());
             }
         }
         setComposants(tableauComposantRearrange(getComposants()));
