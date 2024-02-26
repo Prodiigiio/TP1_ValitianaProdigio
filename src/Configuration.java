@@ -94,8 +94,10 @@ public class Configuration {
             return false;
 
         for (int i = 0; i < getComposants().length; i++) {
-            if(getComposants()[i] != null && getComposants()[i].getCategorie().equalsIgnoreCase(composant.getCategorie()))
+            if(getComposants()[i] != null && getComposants()[i].getCategorie().equalsIgnoreCase(composant.getCategorie())){
+                System.out.println("Il y a déjà un composant de cette catégorie: " + getComposants()[i].toString());
                 return false;
+            }
         }
 
         if((getCoutTotalSansTaxes() + composant.getPrix()) > getPrixMax())
@@ -104,8 +106,9 @@ public class Configuration {
 
         for (int i = 0; i < getComposants().length; i++) {
             if(getComposants()[i] == null){
-                getComposants()[i] = composant;
+                getComposants()[i] = composant.copier();
                 setComposants(tableauComposantRearrange(getComposants()));
+                System.out.printf("%s ajouté à la configuration (total=%.2f$)%n", getComposants()[i], getCoutTotalSansTaxes());
                 return true;
             }
         }
@@ -124,6 +127,7 @@ public class Configuration {
             }
             if(getComposants()[i] != null && !(getComposants()[i].equals(composant))){
                 System.out.println("Composant introuvable: " + getComposants()[i].toString());
+                return false;
             }
         }
         setComposants(tableauComposantRearrange(getComposants()));
