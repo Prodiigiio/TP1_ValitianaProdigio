@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="Affichage Composant introuvable&#10;Fait pour la foncttion retirer">
+    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="BUG AFFICHAGE DES PRIX - TEST&#10;Changé getPrix pour getCoutTotalSansTaxes();">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
     </list>
@@ -35,35 +35,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/prodi/OneDrive - Cégep André-Laurendeau/techniqueInformatique420B/Hiver2024/420-235ProgObjet/Exercices/Critique2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main (1).executor": "Run",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/prodi/OneDrive - Cégep André-Laurendeau/techniqueInformatique420B/Hiver2024/420-235ProgObjet/TravailPratique/TP1_PC_BUILDER",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="TP1_PC_BUILDER" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+}]]></component>
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="TP1_PC_BUILDER" />
@@ -71,11 +64,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main (1)" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -105,7 +93,12 @@
       <workItem from="1708715355141" duration="2133000" />
       <workItem from="1708884700709" duration="4691000" />
       <workItem from="1708889438581" duration="7510000" />
-      <workItem from="1708962208002" duration="4321000" />
+      <workItem from="1708962208002" duration="6776000" />
+      <workItem from="1708987586877" duration="42000" />
+      <workItem from="1708999743260" duration="41000" />
+      <workItem from="1708999808552" duration="1333000" />
+      <workItem from="1709038975283" duration="596000" />
+      <workItem from="1709040645092" duration="4922000" />
     </task>
     <task id="LOCAL-00001" summary="Class Composants:&#10;Setters, Getters, Constructeur">
       <option name="closed" value="true" />
@@ -291,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708964373539</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="BUG AFFICHAGE DES PRIX - TEST&#10;Changé getPrix pour getCoutTotalSansTaxes();">
+      <option name="closed" value="true" />
+      <created>1708966700253</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1708966700253</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +323,8 @@
     <MESSAGE value="getComposant()&#10;Au cas où la valeur retourne null, une condition bouge les composants de 1 pour remplir la cellule." />
     <MESSAGE value="TEST#4&#10;Tout va bien à partir de là, sauf que je n'ai pas encore bien traité le message de retirement. Je crois que ma méthode de copie profonde n'est pas solide non plus et je me rapproche de fixer les composants qui restent durant les futurs test à partir du test #5.&#10;&#10;AUSSI - &#10;J'ai créé un tableau qui gère les cases vides. TableauComposantRearrange()..." />
     <MESSAGE value="Affichage Composant introuvable&#10;Fait pour la foncttion retirer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Affichage Composant introuvable&#10;Fait pour la foncttion retirer" />
+    <MESSAGE value="BUG AFFICHAGE DES PRIX - TEST&#10;Changé getPrix pour getCoutTotalSansTaxes();" />
+    <option name="LAST_COMMIT_MESSAGE" value="BUG AFFICHAGE DES PRIX - TEST&#10;Changé getPrix pour getCoutTotalSansTaxes();" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
