@@ -4,7 +4,7 @@ public class Configuration {
     private String DESCRIPTION;
     private double prixMax;
     private Composant[] composants;
-    private final int MAX_COMPOSANTS = 20;
+    private final static int MAX_COMPOSANTS = 20;
 
     public Configuration(String description, double prixMax, Composant[] composants) {
         setDescription(description);
@@ -19,11 +19,9 @@ public class Configuration {
 
         for (int i = 0; i < getComposants().length; i++) {
             if(getComposants()[i] != null){
-                getComposants()[i] = originale.getComposants()[i].copier();
-               // getNbComposants()[i] += composants[i].copier(); verifier plus tard
+                originale.getComposants()[i] = getComposants()[i].copier();
             }
         }
-
 
     }
 
@@ -71,7 +69,7 @@ public class Configuration {
 
     public Composant rechercher(String categorie) {
         for (int i = 0; i < getComposants().length; i++) {
-            if (getComposants()[i] != null && getComposants()[i].getCategorie().equalsIgnoreCase(categorie))
+            if (composants[i] != null && getComposants()[i].getCategorie().equalsIgnoreCase(categorie))
                 return getComposants()[i];
         }
         return null;
@@ -104,7 +102,7 @@ public class Configuration {
             return false;
 
         for (int i = 0; i < getComposants().length; i++) {
-            if (getComposants()[i] != null && getComposants()[i].getCategorie().equalsIgnoreCase(composant.getCategorie())) {
+            if (composants[i] != null && composants[i].getCategorie().equalsIgnoreCase(composant.getCategorie())) {
                 System.out.println("Il y a déjà un composant de cette catégorie: " + getComposants()[i].toString());
                 return false;
             }
@@ -116,9 +114,9 @@ public class Configuration {
         }
 
         for (int i = 0; i < getComposants().length; i++) {
-            if (getComposants()[i] == null) {
-                getComposants()[i] = composant;
-                setComposants(tableauComposantRearrange(getComposants()));
+            if (composants[i] == null) {
+                composants[i] = composant;
+                setComposants(tableauComposantRearrange(composants));
                 System.out.printf("%s ajouté à la configuration (total=%.2f$)%n", getComposants()[i], getCoutTotalSansTaxes());
                 return true;
             }
@@ -130,8 +128,8 @@ public class Configuration {
     public boolean retirer(Composant composant) {
         for (int i = 0; i < getComposants().length; i++) {
             if (getComposants()[i] != null && getComposants()[i].estIdentique(composant)) {
-                System.out.printf("%s retiré de la configuration (total=%.2f$)%n", getComposants()[i], getCoutTotalSansTaxes());
-                getComposants()[i] = null;
+                System.out.printf("%s retiré de la configuration (total=%.2f$)%n", composants[i], getCoutTotalSansTaxes());
+                composants[i] = null;
                 setComposants(tableauComposantRearrange(getComposants()));
                 return true;
             }

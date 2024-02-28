@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="BUG AFFICHAGE DES PRIX - TEST&#10;Changé getPrix pour getCoutTotalSansTaxes();">
+    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="copie Profonde CONFIGURATION&#10;Ajouté une boucle qui passe par l'intérieur du composant et copier TOUT">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
     </list>
@@ -23,6 +23,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Prodiigiio&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="4c2f3a9c-f929-4114-ad56-4d169d90ba0b" />
+        <option name="url" value="https://github.com/Prodiigiio/TP1_PC_BUILDER.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -38,7 +52,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main (1).executor": "Run",
-    "Application.Main.executor": "Run",
+    "Application.Main.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -53,6 +67,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -98,7 +113,11 @@
       <workItem from="1708999743260" duration="41000" />
       <workItem from="1708999808552" duration="1333000" />
       <workItem from="1709038975283" duration="596000" />
-      <workItem from="1709040645092" duration="4922000" />
+      <workItem from="1709040645092" duration="5313000" />
+      <workItem from="1709056143430" duration="4000" />
+      <workItem from="1709056922402" duration="6000" />
+      <workItem from="1709140074410" duration="688000" />
+      <workItem from="1709140784808" duration="2556000" />
     </task>
     <task id="LOCAL-00001" summary="Class Composants:&#10;Setters, Getters, Constructeur">
       <option name="closed" value="true" />
@@ -292,14 +311,21 @@
       <option name="project" value="LOCAL" />
       <updated>1708966700253</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="copie Profonde CONFIGURATION&#10;Ajouté une boucle qui passe par l'intérieur du composant et copier TOUT">
+      <option name="closed" value="true" />
+      <created>1709048012550</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1709048012550</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Class Composants:&#10;Setters, Getters, Constructeur" />
     <MESSAGE value="Class Composants:&#10;copier() et constructeur prive" />
     <MESSAGE value="Class Composants:&#10;Méthode toString();" />
     <MESSAGE value="Class Composants:&#10;Méthode estIdentique rendu plus beau :)" />
@@ -324,7 +350,8 @@
     <MESSAGE value="TEST#4&#10;Tout va bien à partir de là, sauf que je n'ai pas encore bien traité le message de retirement. Je crois que ma méthode de copie profonde n'est pas solide non plus et je me rapproche de fixer les composants qui restent durant les futurs test à partir du test #5.&#10;&#10;AUSSI - &#10;J'ai créé un tableau qui gère les cases vides. TableauComposantRearrange()..." />
     <MESSAGE value="Affichage Composant introuvable&#10;Fait pour la foncttion retirer" />
     <MESSAGE value="BUG AFFICHAGE DES PRIX - TEST&#10;Changé getPrix pour getCoutTotalSansTaxes();" />
-    <option name="LAST_COMMIT_MESSAGE" value="BUG AFFICHAGE DES PRIX - TEST&#10;Changé getPrix pour getCoutTotalSansTaxes();" />
+    <MESSAGE value="copie Profonde CONFIGURATION&#10;Ajouté une boucle qui passe par l'intérieur du composant et copier TOUT" />
+    <option name="LAST_COMMIT_MESSAGE" value="copie Profonde CONFIGURATION&#10;Ajouté une boucle qui passe par l'intérieur du composant et copier TOUT" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -335,5 +362,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
