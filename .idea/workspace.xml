@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="copie Profonde CONFIGURATION&#10;Ajouté une boucle qui passe par l'intérieur du composant et copier TOUT">
+    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="UPDATED COMPOSANTS&#10;getcomposants in a few conditions: composant">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
     </list>
@@ -49,28 +49,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main (1).executor": "Run",
-    "Application.Main.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/prodi/OneDrive - Cégep André-Laurendeau/techniqueInformatique420B/Hiver2024/420-235ProgObjet/TravailPratique/TP1_PC_BUILDER",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/prodi/OneDrive - Cégep André-Laurendeau/techniqueInformatique420B/Hiver2024/420-235ProgObjet/TravailPratique/TP1_PC_BUILDER&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -117,7 +117,8 @@
       <workItem from="1709056143430" duration="4000" />
       <workItem from="1709056922402" duration="6000" />
       <workItem from="1709140074410" duration="688000" />
-      <workItem from="1709140784808" duration="2556000" />
+      <workItem from="1709140784808" duration="2939000" />
+      <workItem from="1709160448673" duration="1384000" />
     </task>
     <task id="LOCAL-00001" summary="Class Composants:&#10;Setters, Getters, Constructeur">
       <option name="closed" value="true" />
@@ -319,14 +320,21 @@
       <option name="project" value="LOCAL" />
       <updated>1709048012550</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="UPDATED COMPOSANTS&#10;getcomposants in a few conditions: composant">
+      <option name="closed" value="true" />
+      <created>1709143432829</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1709143432829</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Class Composants:&#10;copier() et constructeur prive" />
     <MESSAGE value="Class Composants:&#10;Méthode toString();" />
     <MESSAGE value="Class Composants:&#10;Méthode estIdentique rendu plus beau :)" />
     <MESSAGE value="Class Configuration:&#10;getters, Setters, constructeur et début de la création de la copie profonde" />
@@ -351,7 +359,8 @@
     <MESSAGE value="Affichage Composant introuvable&#10;Fait pour la foncttion retirer" />
     <MESSAGE value="BUG AFFICHAGE DES PRIX - TEST&#10;Changé getPrix pour getCoutTotalSansTaxes();" />
     <MESSAGE value="copie Profonde CONFIGURATION&#10;Ajouté une boucle qui passe par l'intérieur du composant et copier TOUT" />
-    <option name="LAST_COMMIT_MESSAGE" value="copie Profonde CONFIGURATION&#10;Ajouté une boucle qui passe par l'intérieur du composant et copier TOUT" />
+    <MESSAGE value="UPDATED COMPOSANTS&#10;getcomposants in a few conditions: composant" />
+    <option name="LAST_COMMIT_MESSAGE" value="UPDATED COMPOSANTS&#10;getcomposants in a few conditions: composant" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

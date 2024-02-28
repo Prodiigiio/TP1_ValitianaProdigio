@@ -128,8 +128,9 @@ public class Configuration {
     public boolean retirer(Composant composant) {
         for (int i = 0; i < getComposants().length; i++) {
             if (getComposants()[i] != null && getComposants()[i].estIdentique(composant)) {
-                System.out.printf("%s retiré de la configuration (total=%.2f$)%n", composants[i], getCoutTotalSansTaxes());
+                Composant composantAAfficher =  composants[i];
                 composants[i] = null;
+                System.out.printf("%s retiré de la configuration (total=%.2f$)%n", composantAAfficher, getCoutTotalSansTaxes());
                 setComposants(tableauComposantRearrange(getComposants()));
                 return true;
             }
