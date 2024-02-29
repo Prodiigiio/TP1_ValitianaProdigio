@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="supprimé les .class autogénérés" />
+    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="Ajouté les tests unitaires">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TP1_PC_BUILDER.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TP1_PC_BUILDER.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TesterAjouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TesterAjouter.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,6 +56,10 @@
   "keyToString": {
     "Application.Main (1).executor": "Run",
     "Application.Main.executor": "Debug",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -64,14 +72,14 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.TesterAjouter">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="TP1_PC_BUILDER" />
@@ -79,6 +87,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TesterAjouter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP1_PC_BUILDER" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TesterAjouter" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TesterAjouter" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -118,7 +140,7 @@
       <workItem from="1709056922402" duration="6000" />
       <workItem from="1709140074410" duration="688000" />
       <workItem from="1709140784808" duration="2939000" />
-      <workItem from="1709160448673" duration="5313000" />
+      <workItem from="1709160448673" duration="5800000" />
     </task>
     <task id="LOCAL-00001" summary="Class Composants:&#10;Setters, Getters, Constructeur">
       <option name="closed" value="true" />
@@ -352,14 +374,21 @@
       <option name="project" value="LOCAL" />
       <updated>1709167739042</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Ajouté les tests unitaires">
+      <option name="closed" value="true" />
+      <created>1709167761483</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1709167761483</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Class Configuration:&#10;Constructeur copie Profonde :heavy_check_mark:" />
     <MESSAGE value="calculerTotal avec taxes :+1:" />
     <MESSAGE value="rechercher composant par catégorie :+1:" />
     <MESSAGE value="&quot;Guard clause&quot; setComposant :+1:&#10;la source du guard clause vient de mon adelphe&#10;(Notion pas encore apris en classe)" />
@@ -384,7 +413,8 @@
     <MESSAGE value="retirer Composant &#10;Fixé le bug d'affichage montrant le mauvais prix du composant." />
     <MESSAGE value="Problème MAJEUR fixé:&#10;.trim() dans méthode remplacer" />
     <MESSAGE value="supprimé les .class autogénérés" />
-    <option name="LAST_COMMIT_MESSAGE" value="supprimé les .class autogénérés" />
+    <MESSAGE value="Ajouté les tests unitaires" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajouté les tests unitaires" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
