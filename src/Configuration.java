@@ -108,10 +108,7 @@ public class Configuration {
 
         if (isComposantExisteDejaDansCategorie(composant)) return false;
 
-        if ((getCoutTotalSansTaxes() + composant.getPrix()) > getPrixMax()) {
-            System.out.println("L'ajout de ce composant ferait dépasser le prix maximum: " + composant);
-            return false;
-        }
+        if (isDepassePrixMaximal(composant)) return false;
 
         for (int i = 0; i < getComposants().length; i++) {
             if (composants[i] == null) {
@@ -122,6 +119,14 @@ public class Configuration {
             }
         }
         setComposants(tableauComposantRearrange(getComposants()));
+        return false;
+    }
+
+    private boolean isDepassePrixMaximal(Composant composant) {
+        if ((getCoutTotalSansTaxes() + composant.getPrix()) > getPrixMax()) {
+            System.out.println("L'ajout de ce composant ferait dépasser le prix maximum: " + composant);
+            return true;
+        }
         return false;
     }
 
