@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="CLEAN CODE - REFRACTOR setComposants &amp; constructeur de copie pour configuration">
+    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="REFRACTOR  méthode ajoutée: isAtteintMaxComposants">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,7 +141,7 @@
       <workItem from="1709056922402" duration="6000" />
       <workItem from="1709140074410" duration="688000" />
       <workItem from="1709140784808" duration="2939000" />
-      <workItem from="1709160448673" duration="8238000" />
+      <workItem from="1709160448673" duration="8376000" />
     </task>
     <task id="LOCAL-00001" summary="Class Composants:&#10;Setters, Getters, Constructeur">
       <option name="closed" value="true" />
@@ -422,15 +423,21 @@
       <option name="project" value="LOCAL" />
       <updated>1709170507836</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="REFRACTOR  méthode ajoutée: isAtteintMaxComposants">
+      <option name="closed" value="true" />
+      <created>1709170724907</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1709170724907</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="boolean retirer" />
-    <MESSAGE value="boolean remplacer" />
     <MESSAGE value="MISE À JOUR -------&#10;composant remplacé this.composant -&gt; référencé la variable d'instance au lieu du paramètre.&#10;composant rechercher -&gt; equalsIgnoreCase() au lieu de .equals()&#10;dans retirer, j'ai changé le .equals en estIdentique() &amp; != null avant la deuxième condition&#10;pour  méthode rempalcer aussi" />
     <MESSAGE value="MISE À JOUR -------&#10;composant remplacé this.composant -&gt; référencé la variable d'instance au lieu du paramètre.&#10;composant rechercher -&gt; equalsIgnoreCase() au lieu de .equals()&#10;dans retirer, j'ai changé le .equals en estIdentique() &amp; != null avant la deuxième condition&#10;pour  méthode remplacer aussi" />
     <MESSAGE value="dernier commit du jour 02/21/2024" />
@@ -454,7 +461,9 @@
     <MESSAGE value="TEST UNITAIRE - ajouterComposantDepassePrixMaxMarchePas()" />
     <MESSAGE value="TEST UNITAIRE - ajouterComposantDepasseNbMaxMarchePas()" />
     <MESSAGE value="CLEAN CODE - REFRACTOR setComposants &amp; constructeur de copie pour configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="CLEAN CODE - REFRACTOR setComposants &amp; constructeur de copie pour configuration" />
+    <MESSAGE value="REFRACTOR  méthode ajouté: isAtteintMaxComposants" />
+    <MESSAGE value="REFRACTOR  méthode ajoutée: isAtteintMaxComposants" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFRACTOR  méthode ajoutée: isAtteintMaxComposants" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

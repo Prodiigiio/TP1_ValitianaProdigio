@@ -106,12 +106,7 @@ public class Configuration {
         if (isAtteintMaxComposants()) // guard clause source: mon adelphe
             return false;
 
-        for (int i = 0; i < getComposants().length; i++) {
-            if (composants[i] != null && composants[i].getCategorie().equalsIgnoreCase(composant.getCategorie())) {
-                System.out.println("Il y a déjà un composant de cette catégorie: " + getComposants()[i].toString());
-                return false;
-            }
-        }
+        if (isComposantExisteDejaDansCategorie(composant)) return false;
 
         if ((getCoutTotalSansTaxes() + composant.getPrix()) > getPrixMax()) {
             System.out.println("L'ajout de ce composant ferait dépasser le prix maximum: " + composant);
@@ -127,6 +122,16 @@ public class Configuration {
             }
         }
         setComposants(tableauComposantRearrange(getComposants()));
+        return false;
+    }
+
+    private boolean isComposantExisteDejaDansCategorie(Composant composant) {
+        for (int i = 0; i < getComposants().length; i++) {
+            if (composants[i] != null && composants[i].getCategorie().equalsIgnoreCase(composant.getCategorie())) {
+                System.out.println("Il y a déjà un composant de cette catégorie: " + getComposants()[i].toString());
+                return true;
+            }
+        }
         return false;
     }
 
