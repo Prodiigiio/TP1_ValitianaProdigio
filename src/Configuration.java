@@ -11,16 +11,19 @@ public class Configuration {
     }
 
     public Configuration(Configuration originale) {
+        Composant[] composantsCopie = new Composant[MAX_COMPOSANTS];
         setDescription(originale.getDescription() + " (copie)");
         setPrixMax(originale.getPrixMax());
-        setComposants(originale.getComposants());
+        setComposants(copierComposants(composantsCopie, originale.composants));
+    }
 
-        for (int i = 0; i < getComposants().length; i++) {
-            if(getComposants()[i] != null){
-                originale.getComposants()[i] = getComposants()[i].copier();
+    private Composant[] copierComposants(Composant[] composantsCopie, Composant[] originale) {
+        for (int i = 0; i < originale.length; i++) {
+            if(originale[i] != null){
+                composantsCopie[i] = originale[i].copier();
             }
         }
-
+        return composantsCopie;
     }
 
     public String getDescription() {
@@ -45,10 +48,14 @@ public class Configuration {
     }
 
     public void setComposants(Composant[] composants) {
-        if (composants.length > MAX_COMPOSANTS) {    //source pour "Guard clause": mon adelphe
+        if (isTropLong(composants)) {    //source pour "Guard clause": mon adelphe
             return;
         }
         this.composants = tableauComposantRearrange(composants);
+    }
+
+    private boolean isTropLong(Composant[] composants) {
+        return composants.length > MAX_COMPOSANTS;
     }
 
     public double calculerTotal(double taxe) {
