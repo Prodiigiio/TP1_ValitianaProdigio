@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="Problème MAJEUR fixé:&#10;.trim() dans méthode remplacer">
-      <change afterPath="$PROJECT_DIR$/tests/TesterAjouter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP1_PC_BUILDER.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TP1_PC_BUILDER.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
-    </list>
+    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="supprimé les .class autogénérés" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,7 +118,7 @@
       <workItem from="1709056922402" duration="6000" />
       <workItem from="1709140074410" duration="688000" />
       <workItem from="1709140784808" duration="2939000" />
-      <workItem from="1709160448673" duration="5275000" />
+      <workItem from="1709160448673" duration="5313000" />
     </task>
     <task id="LOCAL-00001" summary="Class Composants:&#10;Setters, Getters, Constructeur">
       <option name="closed" value="true" />
@@ -349,14 +344,21 @@
       <option name="project" value="LOCAL" />
       <updated>1709167196952</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="supprimé les .class autogénérés">
+      <option name="closed" value="true" />
+      <created>1709167739042</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1709167739042</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Class Configuration:&#10;getters, Setters, constructeur et début de la création de la copie profonde" />
     <MESSAGE value="Class Configuration:&#10;Constructeur copie Profonde :heavy_check_mark:" />
     <MESSAGE value="calculerTotal avec taxes :+1:" />
     <MESSAGE value="rechercher composant par catégorie :+1:" />
@@ -381,7 +383,8 @@
     <MESSAGE value="UPDATED COMPOSANTS&#10;getcomposants in a few conditions: composant" />
     <MESSAGE value="retirer Composant &#10;Fixé le bug d'affichage montrant le mauvais prix du composant." />
     <MESSAGE value="Problème MAJEUR fixé:&#10;.trim() dans méthode remplacer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Problème MAJEUR fixé:&#10;.trim() dans méthode remplacer" />
+    <MESSAGE value="supprimé les .class autogénérés" />
+    <option name="LAST_COMMIT_MESSAGE" value="supprimé les .class autogénérés" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
