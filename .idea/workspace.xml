@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="REFRACTOR  méthode: remplacer&#10;condition -&gt; isMemeCategorie">
+    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="REFRACTOR  méthode: retirer&#10;Condition -&gt; isIdentique">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,7 +141,7 @@
       <workItem from="1709056922402" duration="6000" />
       <workItem from="1709140074410" duration="688000" />
       <workItem from="1709140784808" duration="2939000" />
-      <workItem from="1709160448673" duration="10371000" />
+      <workItem from="1709160448673" duration="10861000" />
     </task>
     <task id="LOCAL-00001" summary="Class Composants:&#10;Setters, Getters, Constructeur">
       <option name="closed" value="true" />
@@ -494,14 +495,21 @@
       <option name="project" value="LOCAL" />
       <updated>1709172797615</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="REFRACTOR  méthode: retirer&#10;Condition -&gt; isIdentique">
+      <option name="closed" value="true" />
+      <created>1709172852601</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1709172852601</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TEST#4&#10;Tout va bien à partir de là, sauf que je n'ai pas encore bien traité le message de retirement. Je crois que ma méthode de copie profonde n'est pas solide non plus et je me rapproche de fixer les composants qui restent durant les futurs test à partir du test #5.&#10;&#10;AUSSI - &#10;J'ai créé un tableau qui gère les cases vides. TableauComposantRearrange()..." />
     <MESSAGE value="Affichage Composant introuvable&#10;Fait pour la foncttion retirer" />
     <MESSAGE value="BUG AFFICHAGE DES PRIX - TEST&#10;Changé getPrix pour getCoutTotalSansTaxes();" />
     <MESSAGE value="copie Profonde CONFIGURATION&#10;Ajouté une boucle qui passe par l'intérieur du composant et copier TOUT" />
@@ -526,7 +534,8 @@
     <MESSAGE value="REFRACTOR  méthode setComposants: condition -&gt; isLongeurTableauTropGrand" />
     <MESSAGE value="REFRACTOR  méthode: rechercher &#10;Condition -&gt; isComposantTrouve" />
     <MESSAGE value="REFRACTOR  méthode: remplacer&#10;condition -&gt; isMemeCategorie" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFRACTOR  méthode: remplacer&#10;condition -&gt; isMemeCategorie" />
+    <MESSAGE value="REFRACTOR  méthode: retirer&#10;Condition -&gt; isIdentique" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFRACTOR  méthode: retirer&#10;Condition -&gt; isIdentique" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

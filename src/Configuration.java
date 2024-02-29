@@ -76,14 +76,14 @@ public class Configuration {
 
     public Composant rechercher(String categorie) {
         for (int i = 0; i < composants.length; i++) {
-            if (isComposantTrouve(categorie, i))
+            if (isComposantTrouve(categorie, composants[i]))
                 return composants[i];
         }
         return null;
     }
 
-    private boolean isComposantTrouve(String categorie, int i) {
-        return composants[i] != null && composants[i].getCategorie().equalsIgnoreCase(categorie);
+    private boolean isComposantTrouve(String categorie, Composant composant) {
+        return composant != null && composant.getCategorie().equalsIgnoreCase(categorie);
     }
 
     public int getNbComposants() {
@@ -146,7 +146,7 @@ public class Configuration {
 
     private boolean isComposantExisteDejaDansCategorie(Composant composant) {
         for (int i = 0; i < composants.length; i++) {
-            if (composants[i] != null && composants[i].getCategorie().equalsIgnoreCase(composant.getCategorie())) {
+            if (isMemeCategorie(composant, i)) {
                 System.out.println("Il y a déjà un composant de cette catégorie: " + composants[i].toString());
                 return true;
             }
