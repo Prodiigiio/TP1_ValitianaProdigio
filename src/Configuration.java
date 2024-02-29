@@ -110,6 +110,12 @@ public class Configuration {
 
         if (isDepassePrixMaximal(composant)) return false;
 
+        if (isAjouteALaConfiguration(composant)) return true;
+        setComposants(tableauComposantRearrange(getComposants()));
+        return false;
+    }
+
+    private boolean isAjouteALaConfiguration(Composant composant) {
         for (int i = 0; i < getComposants().length; i++) {
             if (composants[i] == null) {
                 composants[i] = composant;
@@ -118,7 +124,6 @@ public class Configuration {
                 return true;
             }
         }
-        setComposants(tableauComposantRearrange(getComposants()));
         return false;
     }
 
