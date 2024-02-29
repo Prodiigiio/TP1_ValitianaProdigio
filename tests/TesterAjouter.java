@@ -37,4 +37,18 @@ public class TesterAjouter {
         assertFalse(result);
         assertEquals(0, configuration.getNbComposants());
     }
+
+    @Test
+    void ajouterComposantDepasseNbMaxMarchePas() {
+        Composant composant = new Composant("CPU", "Marque1", "Nom1", 100.0);
+        Configuration configuration = new Configuration("Description", 50000.0, new Composant[20]);
+        for (int i = 0; i < 20; i++) {
+            configuration.ajouter(new Composant("RAM" + i, "Marque", "Nom" + i, 50.0));
+        }
+
+        boolean result = configuration.ajouter(composant);
+
+        assertFalse(result);
+        assertEquals(20, configuration.getNbComposants());
+    }
 }
