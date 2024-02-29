@@ -26,4 +26,15 @@ public class TesterAjouter {
         assertFalse(result);
         assertEquals(1, configuration.getNbComposants());
     }
+
+    @Test
+    void ajouterComposantDepassePrixMaxMarchePas() {
+        Composant composant = new Composant("GPU", "Marque1", "Nom1", 600.0);
+        Configuration configuration = new Configuration("Description", 500.0, new Composant[20]);
+
+        boolean result = configuration.ajouter(composant);
+
+        assertFalse(result);
+        assertEquals(0, configuration.getNbComposants());
+    }
 }
