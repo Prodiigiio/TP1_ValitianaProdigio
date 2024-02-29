@@ -104,8 +104,12 @@ public class Configuration {
     public boolean ajouter(Composant composant) {
         if (isConditionsPourAjouterNonRespecte(composant)) return false; // guard clause source: mon adelphe
         if (isAjouteALaConfiguration(composant)) return true;
-        setComposants(tableauComposantRearrange(getComposants()));
+        actualiserComposants();
         return false;
+    }
+
+    private void actualiserComposants() {
+        setComposants(tableauComposantRearrange(getComposants()));
     }
 
     private boolean isConditionsPourAjouterNonRespecte(Composant composant) {
@@ -154,7 +158,7 @@ public class Configuration {
                 Composant composantAAfficher =  composants[i];
                 composants[i] = null;
                 System.out.printf("%s retiré de la configuration (total=%.2f$)%n", composantAAfficher, getCoutTotalSansTaxes());
-                setComposants(tableauComposantRearrange(getComposants()));
+                actualiserComposants();
                 return true;
             }
         }
@@ -168,7 +172,7 @@ public class Configuration {
                 System.out.println(getComposants()[i].toString() + " retiré de la configuration");
                 composants[i] = composant;
                 System.out.println(getComposants()[i] + " ajouté de la configuration");
-                setComposants(tableauComposantRearrange(getComposants()));
+                actualiserComposants();
                 return true;
             }
         }

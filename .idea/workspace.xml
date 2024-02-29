@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="REFRACTOR  méthode ajouter: isAjouteALaConfiguration">
+    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="REFRACTOR  méthode ajouter: isConditionsPourAjouterNonRespecte">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
     </list>
@@ -141,7 +141,7 @@
       <workItem from="1709056922402" duration="6000" />
       <workItem from="1709140074410" duration="688000" />
       <workItem from="1709140784808" duration="2939000" />
-      <workItem from="1709160448673" duration="8869000" />
+      <workItem from="1709160448673" duration="9014000" />
     </task>
     <task id="LOCAL-00001" summary="Class Composants:&#10;Setters, Getters, Constructeur">
       <option name="closed" value="true" />
@@ -455,14 +455,21 @@
       <option name="project" value="LOCAL" />
       <updated>1709171053867</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="REFRACTOR  méthode ajouter: isConditionsPourAjouterNonRespecte">
+      <option name="closed" value="true" />
+      <created>1709171375329</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1709171375329</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="public getComposant() - MISE A JOUR&#10;Ajouté une boucle qui vérifie si la valeur de la cellule du composant est vide.&#10;Si pas vide, retourne le composant.&#10;Sinon, retourne null. (Pourait causer un problème plus tard?)" />
     <MESSAGE value="toString dans Configuration.java()&#10;Ajouté un cas dans laquel elle retourne quelque chose si la position est null.&#10;Nouvel erreur: main java - 96 -&gt; meme problème indiquant que le retour est null" />
     <MESSAGE value="MISE À JOUR RETIRER()&#10;-Effacé la boucle for et changé en boucle while avec les même conditions&#10;EXCEPTÉ -&gt; le .estIdentique() en !(getComposants()[j].estIdentique(composant))&#10;AUSSI -&gt; ajouté une nouvelle condition: j &lt; getComposants().length -1&#10; ÇA a fixé le problème de j qui devient 2 (outOfBounds)&#10; Cependant, je ne sais pas pourquoi le .length()-1 a marché" />
     <MESSAGE value="Composant.java Ajout de condition&#10;setRabais() -&gt; Condition qui assure que le rabais ne dépasse pas 100 et ne soit pas en-dessous de 0&#10;getRabais() -&gt; ajouté un this.rabais / 100 pour le rendre en décimal(Possible que ce soit déjà en décimal)&#10;PROBLÈME:&#10;Lors de l'affichage, ne détecte pas TOUT les composants dans certains tests." />
@@ -487,7 +494,8 @@
     <MESSAGE value="REFRACTOR  méthode ajouter: isAtteintMaxComposants &amp; isComposantExisteDejaDansCategorie" />
     <MESSAGE value="REFRACTOR  méthode ajouter: iDepassePrixMaximal" />
     <MESSAGE value="REFRACTOR  méthode ajouter: isAjouteALaConfiguration" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFRACTOR  méthode ajouter: isAjouteALaConfiguration" />
+    <MESSAGE value="REFRACTOR  méthode ajouter: isConditionsPourAjouterNonRespecte" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFRACTOR  méthode ajouter: isConditionsPourAjouterNonRespecte" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
