@@ -11,7 +11,7 @@ public class Configuration {
     }
 
     public Configuration(Configuration originale) {
-        setDescription(originale.getDescription());
+        setDescription(originale.getDescription() + " (copie)");
         setPrixMax(originale.getPrixMax());
         setComposants(originale.getComposants());
 
