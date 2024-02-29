@@ -103,7 +103,7 @@ public class Configuration {
 
     public boolean ajouter(Composant composant) {
 
-        if (getNbComposants() >= MAX_COMPOSANTS) // guard clause source: mon adelphe
+        if (isAtteintMaxComposants()) // guard clause source: mon adelphe
             return false;
 
         for (int i = 0; i < getComposants().length; i++) {
@@ -128,6 +128,10 @@ public class Configuration {
         }
         setComposants(tableauComposantRearrange(getComposants()));
         return false;
+    }
+
+    private boolean isAtteintMaxComposants() {
+        return getNbComposants() >= MAX_COMPOSANTS;
     }
 
     public boolean retirer(Composant composant) {
