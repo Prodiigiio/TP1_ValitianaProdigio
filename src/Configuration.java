@@ -102,17 +102,16 @@ public class Configuration {
     }
 
     public boolean ajouter(Composant composant) {
-
-        if (isAtteintMaxComposants()) // guard clause source: mon adelphe
-            return false;
-
-        if (isComposantExisteDejaDansCategorie(composant)) return false;
-
-        if (isDepassePrixMaximal(composant)) return false;
-
+        if (isConditionsPourAjouterNonRespecte(composant)) return false; // guard clause source: mon adelphe
         if (isAjouteALaConfiguration(composant)) return true;
         setComposants(tableauComposantRearrange(getComposants()));
         return false;
+    }
+
+    private boolean isConditionsPourAjouterNonRespecte(Composant composant) {
+        return isAtteintMaxComposants()
+                || isComposantExisteDejaDansCategorie(composant)
+                || isDepassePrixMaximal(composant);
     }
 
     private boolean isAjouteALaConfiguration(Composant composant) {
