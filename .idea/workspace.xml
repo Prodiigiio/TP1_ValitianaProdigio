@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="Ajouté les tests unitaires">
+    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="TESTSUNITAIRES ajouterComposantQuiMarche()">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TP1_PC_BUILDER.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TP1_PC_BUILDER.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/TesterAjouter.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TesterAjouter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +56,7 @@
     "Application.Main (1).executor": "Run",
     "Application.Main.executor": "Debug",
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.TesterAjouter.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -140,7 +140,7 @@
       <workItem from="1709056922402" duration="6000" />
       <workItem from="1709140074410" duration="688000" />
       <workItem from="1709140784808" duration="2939000" />
-      <workItem from="1709160448673" duration="5800000" />
+      <workItem from="1709160448673" duration="6173000" />
     </task>
     <task id="LOCAL-00001" summary="Class Composants:&#10;Setters, Getters, Constructeur">
       <option name="closed" value="true" />
@@ -382,15 +382,21 @@
       <option name="project" value="LOCAL" />
       <updated>1709167761483</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="TESTSUNITAIRES ajouterComposantQuiMarche()">
+      <option name="closed" value="true" />
+      <created>1709168304535</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1709168304535</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="calculerTotal avec taxes :+1:" />
-    <MESSAGE value="rechercher composant par catégorie :+1:" />
     <MESSAGE value="&quot;Guard clause&quot; setComposant :+1:&#10;la source du guard clause vient de mon adelphe&#10;(Notion pas encore apris en classe)" />
     <MESSAGE value=" getNbComposant :+1:&#10; compte le nombre de composants" />
     <MESSAGE value="getCoutTotalSansTaxes ⚠️EXTRACTION⚠️&#10;Une extraction qui était à la base membre d'une autre méthode sous le nom de &quot;calculerCoutTotal&quot;" />
@@ -414,7 +420,9 @@
     <MESSAGE value="Problème MAJEUR fixé:&#10;.trim() dans méthode remplacer" />
     <MESSAGE value="supprimé les .class autogénérés" />
     <MESSAGE value="Ajouté les tests unitaires" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajouté les tests unitaires" />
+    <MESSAGE value="TESTSUNITAIRES&#10;ajouterComposantQuiMarche()" />
+    <MESSAGE value="TESTSUNITAIRES ajouterComposantQuiMarche()" />
+    <option name="LAST_COMMIT_MESSAGE" value="TESTSUNITAIRES ajouterComposantQuiMarche()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
