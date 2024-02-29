@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="REFRACTOR  méthode: retirer&#10;Condition -&gt; isIdentique">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +54,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main (1).executor": "Run",
-    "Application.Main.executor": "Debug",
+    "Application.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.TesterAjouter.executor": "Run",
     "Repository.Attach.Annotations": "false",
@@ -66,7 +66,7 @@
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/prodi/OneDrive - Cégep André-Laurendeau/techniqueInformatique420B/Hiver2024/420-235ProgObjet/TravailPratique/TP1_PC_BUILDER",
+    "last_opened_file_path": "C:/Users/prodi/OneDrive - Cégep André-Laurendeau/techniqueInformatique420B/Hiver2024/420-235ProgObjet/TravailPratique/TP1_ValitianaProdigio",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -80,7 +80,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.TesterAjouter">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="TP1_PC_BUILDER" />
@@ -142,6 +142,7 @@
       <workItem from="1709140074410" duration="688000" />
       <workItem from="1709140784808" duration="2939000" />
       <workItem from="1709160448673" duration="10861000" />
+      <workItem from="1709174165246" duration="236000" />
     </task>
     <task id="LOCAL-00001" summary="Class Composants:&#10;Setters, Getters, Constructeur">
       <option name="closed" value="true" />
