@@ -160,7 +160,7 @@ public class Configuration {
 
     public boolean retirer(Composant composant) {
         for (int i = 0; i < composants.length; i++) {
-            if (composants[i] != null && composants[i].estIdentique(composant)) {
+            if (isIdentique(composant, i)) {
                 Composant composantAAfficher =  composants[i];
                 composants[i] = null;
                 System.out.printf("%s retiré de la configuration (total=%.2f$)%n", composantAAfficher, getCoutTotalSansTaxes());
@@ -170,6 +170,10 @@ public class Configuration {
         }
         System.out.println("Composant introuvable: " + composant.toString());
         return false;
+    }
+
+    private boolean isIdentique(Composant composant, int i) {
+        return composants[i] != null && composants[i].estIdentique(composant);
     }
 
     public boolean remplacer(Composant composant) {
