@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="REFRACTOR  méthode ajouter: isConditionsPourAjouterNonRespecte">
+    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="REFRACTOR  méthode setComposants: condition -&gt; isLongeurTableauTropGrand">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
     </list>
@@ -141,7 +141,7 @@
       <workItem from="1709056922402" duration="6000" />
       <workItem from="1709140074410" duration="688000" />
       <workItem from="1709140784808" duration="2939000" />
-      <workItem from="1709160448673" duration="9014000" />
+      <workItem from="1709160448673" duration="9894000" />
     </task>
     <task id="LOCAL-00001" summary="Class Composants:&#10;Setters, Getters, Constructeur">
       <option name="closed" value="true" />
@@ -463,15 +463,29 @@
       <option name="project" value="LOCAL" />
       <updated>1709171375329</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="REFRACTOR  méthode ajouter: actualiserComposants">
+      <option name="closed" value="true" />
+      <created>1709171477192</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1709171477192</updated>
+    </task>
+    <task id="LOCAL-00042" summary="REFRACTOR  méthode setComposants: condition -&gt; isLongeurTableauTropGrand">
+      <option name="closed" value="true" />
+      <created>1709171699356</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1709171699356</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="toString dans Configuration.java()&#10;Ajouté un cas dans laquel elle retourne quelque chose si la position est null.&#10;Nouvel erreur: main java - 96 -&gt; meme problème indiquant que le retour est null" />
-    <MESSAGE value="MISE À JOUR RETIRER()&#10;-Effacé la boucle for et changé en boucle while avec les même conditions&#10;EXCEPTÉ -&gt; le .estIdentique() en !(getComposants()[j].estIdentique(composant))&#10;AUSSI -&gt; ajouté une nouvelle condition: j &lt; getComposants().length -1&#10; ÇA a fixé le problème de j qui devient 2 (outOfBounds)&#10; Cependant, je ne sais pas pourquoi le .length()-1 a marché" />
     <MESSAGE value="Composant.java Ajout de condition&#10;setRabais() -&gt; Condition qui assure que le rabais ne dépasse pas 100 et ne soit pas en-dessous de 0&#10;getRabais() -&gt; ajouté un this.rabais / 100 pour le rendre en décimal(Possible que ce soit déjà en décimal)&#10;PROBLÈME:&#10;Lors de l'affichage, ne détecte pas TOUT les composants dans certains tests." />
     <MESSAGE value="getComposant()&#10;Au cas où la valeur retourne null, une condition bouge les composants de 1 pour remplir la cellule." />
     <MESSAGE value="TEST#4&#10;Tout va bien à partir de là, sauf que je n'ai pas encore bien traité le message de retirement. Je crois que ma méthode de copie profonde n'est pas solide non plus et je me rapproche de fixer les composants qui restent durant les futurs test à partir du test #5.&#10;&#10;AUSSI - &#10;J'ai créé un tableau qui gère les cases vides. TableauComposantRearrange()..." />
@@ -495,7 +509,9 @@
     <MESSAGE value="REFRACTOR  méthode ajouter: iDepassePrixMaximal" />
     <MESSAGE value="REFRACTOR  méthode ajouter: isAjouteALaConfiguration" />
     <MESSAGE value="REFRACTOR  méthode ajouter: isConditionsPourAjouterNonRespecte" />
-    <option name="LAST_COMMIT_MESSAGE" value="REFRACTOR  méthode ajouter: isConditionsPourAjouterNonRespecte" />
+    <MESSAGE value="REFRACTOR  méthode ajouter: actualiserComposants" />
+    <MESSAGE value="REFRACTOR  méthode setComposants: condition -&gt; isLongeurTableauTropGrand" />
+    <option name="LAST_COMMIT_MESSAGE" value="REFRACTOR  méthode setComposants: condition -&gt; isLongeurTableauTropGrand" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

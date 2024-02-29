@@ -48,9 +48,7 @@ public class Configuration {
     }
 
     public void setComposants(Composant[] composants) {
-        if (isLonguerTableauTropGrand(composants)) {    //source pour "Guard clause": mon adelphe
-            return;
-        }
+        if (isLonguerTableauTropGrand(composants)) return;   //source pour "Guard clause": mon adelphe
         this.composants = tableauComposantRearrange(composants);
     }
 
@@ -59,6 +57,10 @@ public class Configuration {
     }
 
     public double calculerTotal(double taxe) {
+        return calculerTaxes(taxe);
+    }
+
+    private double calculerTaxes(double taxe) {
         return getCoutTotalSansTaxes() + (getCoutTotalSansTaxes() * taxe);
     }
 
@@ -74,10 +76,14 @@ public class Configuration {
 
     public Composant rechercher(String categorie) {
         for (int i = 0; i < getComposants().length; i++) {
-            if (composants[i] != null && getComposants()[i].getCategorie().equalsIgnoreCase(categorie))
+            if (isComposantTrouve(categorie, i))
                 return getComposants()[i];
         }
         return null;
+    }
+
+    private boolean isComposantTrouve(String categorie, int i) {
+        return composants[i] != null && getComposants()[i].getCategorie().equalsIgnoreCase(categorie);
     }
 
     public int getNbComposants() {
