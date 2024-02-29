@@ -48,13 +48,13 @@ public class Configuration {
     }
 
     public void setComposants(Composant[] composants) {
-        if (isTropLong(composants)) {    //source pour "Guard clause": mon adelphe
+        if (isLonguerTableauTropGrand(composants)) {    //source pour "Guard clause": mon adelphe
             return;
         }
         this.composants = tableauComposantRearrange(composants);
     }
 
-    private boolean isTropLong(Composant[] composants) {
+    private boolean isLonguerTableauTropGrand(Composant[] composants) {
         return composants.length > MAX_COMPOSANTS;
     }
 
