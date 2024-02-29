@@ -1,7 +1,5 @@
-import java.util.Arrays;
-
 public class Configuration {
-    private String DESCRIPTION;
+    private String description;
     private double prixMax;
     private Composant[] composants;
     private final static int MAX_COMPOSANTS = 20;
@@ -13,7 +11,7 @@ public class Configuration {
     }
 
     public Configuration(Configuration originale) {
-        setDescription(originale.getDESCRIPTION());
+        setDescription(originale.getDescription());
         setPrixMax(originale.getPrixMax());
         setComposants(originale.getComposants());
 
@@ -25,12 +23,12 @@ public class Configuration {
 
     }
 
-    public String getDESCRIPTION() {
-        return DESCRIPTION;
+    public String getDescription() {
+        return description;
     }
 
     private void setDescription(String description) {
-        this.DESCRIPTION = description;
+        this.description = description;
     }
 
     public double getPrixMax() {
@@ -141,7 +139,7 @@ public class Configuration {
 
     public boolean remplacer(Composant composant) {
         for (int i = 0; i < getComposants().length; i++) {
-            if (composants[i] != null && composants[i].getCategorie().equalsIgnoreCase(composant.getCategorie().trim())) {
+            if (composants[i] != null && composants[i].getCategorie().trim().equalsIgnoreCase(composant.getCategorie().trim())) {
                 System.out.println(getComposants()[i].toString() + " retiré de la configuration");
                 composants[i] = composant;
                 System.out.println(getComposants()[i] + " ajouté de la configuration");
@@ -160,6 +158,6 @@ public class Configuration {
                 specComplete += String.format("%d : %s (%.2f$)\n", (i + 1), getComposants()[i].toString(), getComposants()[i].getPrix());
             }
         }
-        return String.format("%s (max %.2f$):\n%s", getDESCRIPTION(), getPrixMax(), specComplete);
+        return String.format("%s (max %.2f$):\n%s", getDescription(), getPrixMax(), specComplete);
     }
 }

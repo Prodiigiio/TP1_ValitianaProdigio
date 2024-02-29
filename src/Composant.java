@@ -21,7 +21,7 @@ public class Composant {
             setRabais(rabais);
     }
     public String getCategorie() {
-        return this.categorie;
+        return this.categorie.toUpperCase();
     }
     public void setCategorie(String categorie) {
         this.categorie = categorie;

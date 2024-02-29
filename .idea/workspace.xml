@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="UPDATED COMPOSANTS&#10;getcomposants in a few conditions: composant">
+    <list default="true" id="509bd0fa-8ef3-465b-b9b5-3e5810ea7193" name="Changes" comment="retirer Composant &#10;Fixé le bug d'affichage montrant le mauvais prix du composant.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Composant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Composant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +119,7 @@
       <workItem from="1709056922402" duration="6000" />
       <workItem from="1709140074410" duration="688000" />
       <workItem from="1709140784808" duration="2939000" />
-      <workItem from="1709160448673" duration="1384000" />
+      <workItem from="1709160448673" duration="4593000" />
     </task>
     <task id="LOCAL-00001" summary="Class Composants:&#10;Setters, Getters, Constructeur">
       <option name="closed" value="true" />
@@ -328,14 +329,21 @@
       <option name="project" value="LOCAL" />
       <updated>1709143432829</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="retirer Composant &#10;Fixé le bug d'affichage montrant le mauvais prix du composant.">
+      <option name="closed" value="true" />
+      <created>1709161933498</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1709161933498</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Class Composants:&#10;Méthode toString();" />
     <MESSAGE value="Class Composants:&#10;Méthode estIdentique rendu plus beau :)" />
     <MESSAGE value="Class Configuration:&#10;getters, Setters, constructeur et début de la création de la copie profonde" />
     <MESSAGE value="Class Configuration:&#10;Constructeur copie Profonde :heavy_check_mark:" />
@@ -360,7 +368,8 @@
     <MESSAGE value="BUG AFFICHAGE DES PRIX - TEST&#10;Changé getPrix pour getCoutTotalSansTaxes();" />
     <MESSAGE value="copie Profonde CONFIGURATION&#10;Ajouté une boucle qui passe par l'intérieur du composant et copier TOUT" />
     <MESSAGE value="UPDATED COMPOSANTS&#10;getcomposants in a few conditions: composant" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPDATED COMPOSANTS&#10;getcomposants in a few conditions: composant" />
+    <MESSAGE value="retirer Composant &#10;Fixé le bug d'affichage montrant le mauvais prix du composant." />
+    <option name="LAST_COMMIT_MESSAGE" value="retirer Composant &#10;Fixé le bug d'affichage montrant le mauvais prix du composant." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
