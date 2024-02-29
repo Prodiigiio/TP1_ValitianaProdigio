@@ -66,30 +66,30 @@ public class Configuration {
 
     private double getCoutTotalSansTaxes() {
         double coutTotalSansTaxes = 0.0;
-        for (int i = 0; i < getComposants().length; i++) {
-            if (getComposants()[i] != null) {
-                coutTotalSansTaxes += getComposants()[i].getPrix();
+        for (int i = 0; i < composants.length; i++) {
+            if (composants[i] != null) {
+                coutTotalSansTaxes += composants[i].getPrix();
             }
         }
         return coutTotalSansTaxes;
     }
 
     public Composant rechercher(String categorie) {
-        for (int i = 0; i < getComposants().length; i++) {
+        for (int i = 0; i < composants.length; i++) {
             if (isComposantTrouve(categorie, i))
-                return getComposants()[i];
+                return composants[i];
         }
         return null;
     }
 
     private boolean isComposantTrouve(String categorie, int i) {
-        return composants[i] != null && getComposants()[i].getCategorie().equalsIgnoreCase(categorie);
+        return composants[i] != null && composants[i].getCategorie().equalsIgnoreCase(categorie);
     }
 
     public int getNbComposants() {
         int compteurComposant = 0;
-        for (int i = 0; i < getComposants().length; i++) {
-            if (getComposants()[i] != null)
+        for (int i = 0; i < composants.length; i++) {
+            if (composants[i] != null)
                 compteurComposant++;
         }
         return compteurComposant;
@@ -115,7 +115,7 @@ public class Configuration {
     }
 
     private void actualiserComposants() {
-        setComposants(tableauComposantRearrange(getComposants()));
+        setComposants(tableauComposantRearrange(composants));
     }
 
     private boolean isConditionsPourAjouterNonRespecte(Composant composant) {
@@ -125,11 +125,11 @@ public class Configuration {
     }
 
     private boolean isAjouteALaConfiguration(Composant composant) {
-        for (int i = 0; i < getComposants().length; i++) {
+        for (int i = 0; i < composants.length; i++) {
             if (composants[i] == null) {
                 composants[i] = composant;
                 setComposants(tableauComposantRearrange(composants));
-                System.out.printf("%s ajouté à la configuration (total=%.2f$)%n", getComposants()[i], getCoutTotalSansTaxes());
+                System.out.printf("%s ajouté à la configuration (total=%.2f$)%n", composants[i], getCoutTotalSansTaxes());
                 return true;
             }
         }
@@ -145,9 +145,9 @@ public class Configuration {
     }
 
     private boolean isComposantExisteDejaDansCategorie(Composant composant) {
-        for (int i = 0; i < getComposants().length; i++) {
+        for (int i = 0; i < composants.length; i++) {
             if (composants[i] != null && composants[i].getCategorie().equalsIgnoreCase(composant.getCategorie())) {
-                System.out.println("Il y a déjà un composant de cette catégorie: " + getComposants()[i].toString());
+                System.out.println("Il y a déjà un composant de cette catégorie: " + composants[i].toString());
                 return true;
             }
         }
@@ -159,8 +159,8 @@ public class Configuration {
     }
 
     public boolean retirer(Composant composant) {
-        for (int i = 0; i < getComposants().length; i++) {
-            if (getComposants()[i] != null && getComposants()[i].estIdentique(composant)) {
+        for (int i = 0; i < composants.length; i++) {
+            if (composants[i] != null && composants[i].estIdentique(composant)) {
                 Composant composantAAfficher =  composants[i];
                 composants[i] = null;
                 System.out.printf("%s retiré de la configuration (total=%.2f$)%n", composantAAfficher, getCoutTotalSansTaxes());
@@ -173,11 +173,11 @@ public class Configuration {
     }
 
     public boolean remplacer(Composant composant) {
-        for (int i = 0; i < getComposants().length; i++) {
-            if (composants[i] != null && composants[i].getCategorie().trim().equalsIgnoreCase(composant.getCategorie().trim())) {
-                System.out.println(getComposants()[i].toString() + " retiré de la configuration");
+        for (int i = 0; i < composants.length; i++) {
+            if (isMemeCategorie(composant, i)) {
+                System.out.println(composants[i].toString() + " retiré de la configuration");
                 composants[i] = composant;
-                System.out.println(getComposants()[i] + " ajouté de la configuration");
+                System.out.println(composants[i] + " ajouté de la configuration");
                 actualiserComposants();
                 return true;
             }
@@ -185,12 +185,16 @@ public class Configuration {
         return false;
     }
 
+    private boolean isMemeCategorie(Composant composant, int i) {
+        return composants[i] != null && composants[i].getCategorie().trim().equalsIgnoreCase(composant.getCategorie().trim());
+    }
+
     @Override
     public String toString() {
         String specComplete = "";
-        for (int i = 0; i < getComposants().length; i++) {
-            if (getComposants()[i] != null) {
-                specComplete += String.format("%d : %s (%.2f$)\n", (i + 1), getComposants()[i].toString(), getComposants()[i].getPrix());
+        for (int i = 0; i < composants.length; i++) {
+            if (composants[i] != null) {
+                specComplete += String.format("%d : %s (%.2f$)\n", (i + 1), composants[i].toString(), composants[i].getPrix());
             }
         }
         return String.format("%s (max %.2f$):\n%s", getDescription(), getPrixMax(), specComplete);
